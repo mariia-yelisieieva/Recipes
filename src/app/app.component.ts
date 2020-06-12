@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { MenuItem } from './header/header.menu.item.enum';
 
 @Component({
   selector: 'app-root',
@@ -7,4 +8,10 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'Recipies';
+  selectedMenuItem: MenuItem = MenuItem.Recipes;
+
+  onMenuItemSelected(selectedMenuItem: MenuItem) {
+    this.selectedMenuItem = selectedMenuItem;
+  }
+
 }
