@@ -9,13 +9,13 @@ export class RecipesService {
   recipeSelected = new EventEmitter<Recipe>();
 
   private recipes: Recipe[] = [
-    new Recipe("Schnitzel", "some description", 
-      "https://upload.wikimedia.org/wikipedia/commons/1/15/Recipe_logo.jpeg", 
+    new Recipe("Schnitzel", "some description",
+      "https://upload.wikimedia.org/wikipedia/commons/1/15/Recipe_logo.jpeg",
       [
         new Ingredient("Meat", 1),
         new Ingredient("Fries", 10),
       ]),
-    new Recipe("Burger", "some description", 
+    new Recipe("Burger", "some description",
       "https://upload.wikimedia.org/wikipedia/commons/1/15/Recipe_logo.jpeg",
       [
         new Ingredient("Buns", 2),
@@ -30,12 +30,12 @@ export class RecipesService {
       return this.recipes.slice();
   }
 
-  addRecipe(recipe: Recipe) {
-
+  getRecipeById(id: number) {
+    return this.recipes[id];
   }
-  
+
   addIngredientsToShoppingList(ingredients: Ingredient[]) {
     this.shoppingListService.addIngredients(ingredients);
   }
-  
+
 }
