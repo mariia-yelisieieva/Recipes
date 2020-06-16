@@ -7,11 +7,4 @@ import { MenuItem } from './header/header.menu.item.enum';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'Recipies';
-  selectedMenuItem: MenuItem = MenuItem.Recipes;
-
-  onMenuItemSelected(selectedMenuItem: MenuItem) {
-    this.selectedMenuItem = selectedMenuItem;
-  }
-
 }
